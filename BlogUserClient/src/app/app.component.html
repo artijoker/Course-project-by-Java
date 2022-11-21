@@ -1,0 +1,33 @@
+<div
+	class="header bg-dark d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+
+	<ul class="nav col-10 col-md-auto mb-2 justify-content-center mb-md-0 ms-5">
+		<li><a routerLink="/blog" class="nav-link px-2 link-primary text-white">Статьи</a></li>
+		<li><a routerLink="/authors" class="nav-link px-2 link-primary text-white">Авторы</a></li>
+		<li><a routerLink="/categories" class="nav-link px-2 link-primary text-white">Категории</a></li>
+	</ul>
+
+
+	<div *ngIf="(isAuthorized) === true" class="col-md-5 text-end m-2 me-5">
+		<button type="button" class="btn btn-primary me-3" (click)="addPost()">+ Добавить статью</button>
+        <button type="button" class="btn btn-primary me-3" (click)="myPosts()">Мои статьи</button>
+		<button type="button" class="btn btn-primary me-3" (click)="myProfile()">Профиль</button>
+		<button type="button" class="btn btn-primary me-3" (click)="exit()">Выйти</button>
+
+	</div>
+	<div *ngIf="(isAuthorized) === false" class="col-md-5 text-end m-2 me-5">
+		<button type="button" class="btn btn-primary me-2" (click)="singIn()">Войти</button>
+		<button type="button" class="btn btn-primary" (click)="singUp()">Регистрация</button>
+
+	</div>
+</div>
+
+<!-- <app-post-editor-page></app-post-editor-page> -->
+<!-- <app-sing-up-page (onAuthorized)="isAuthorized = true"></app-sing-up-page>
+<app-sing-in-page  (onAuthorized)="isAuthorized = true"></app-sing-in-page> -->
+<!-- <app-home></app-home> -->
+<!-- <app-post></app-post> -->
+
+<!-- <app-account-editor-page></app-account-editor-page> -->
+<!-- <app-account></app-account> -->
+<router-outlet></router-outlet>

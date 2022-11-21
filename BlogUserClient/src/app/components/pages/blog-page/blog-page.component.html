@@ -1,0 +1,17 @@
+<div>
+    <div class=" py-1 m-3" *ngIf="categories.length !== 0">
+        <nav class="nav d-flex me-5 ms-5 flex-wrap">
+            <a role="button" (click)="getAllPosts()" class="p-2 nav-link link-primary text-dark  me-2">
+                Все потоки
+            </a>
+            <a role="button" (click)="getPostsByCategory(category)" class="p-2  nav-link link-primary text-dark  me-2"
+               *ngFor="let category of categories">
+                {{category.categoryName}}
+            </a>
+        </nav>
+    </div>
+    <div><app-posts></app-posts></div>
+
+</div>
+
+<!-- <a class="p-2 link-secondary" href="#">World</a>-->

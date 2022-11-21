@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngIf="accountModels.length === 0" class="p-5 d-flex justify-content-center">
+        <div class="spinner-border"></div>
+    </div>
+    <div *ngIf="accountModels.length > 0">
+        <h1 class="mb-4">Авторы:</h1>
+
+        <div *ngFor="let account of accountModels">
+            <app-author [accountModel]="account"></app-author>
+        </div>
+    </div>
+
+</div>
+

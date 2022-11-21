@@ -1,0 +1,20 @@
+<!--<div class="nearby-user">-->
+<!--    <div class="row">-->
+
+<!--      <div class="col-7">-->
+<!--        <h5><a (click)="goToPostsByAuthorId(author?.id!)" class="profile-link">{{author?.login}}</a></h5>-->
+<!--      </div>-->
+<!--        <div class="col">Количество постов {{author?.quantityPosts}}</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<div role="button" class="author w-50 p-2 rounded m-3 my-shadow"
+     (click)="goToPostsByAuthorId(accountModel?.id!)">
+    <div class="w-50 ms-4">
+        <h1 class="text-success">{{accountModel?.login}}</h1>
+        <p>Опубликовал постов: {{accountModel?.quantityPosts}}</p>
+    </div>
+
+
+</div>
+
+<router-outlet></router-outlet>
